@@ -152,8 +152,9 @@ colnames(ementa_matrix) <- paste("ementa", colnames(ementa_matrix), sep = "_")
 
 df_legis_final <- cbind(df_legis, as.data.frame(text_matrix), as.data.frame(assuntos_matrix), as.data.frame(autores_matrix), as.data.frame(ementa_matrix), as.data.frame(comissoes_matrix))
 
-df_legis_light <- cbind(df_legis, as.data.frame(assuntos_matrix), as.data.frame(comissoes_matrix))
+df_legis_light <- cbind(df_legis, as.data.frame(assuntos_matrix), as.data.frame(autores_matrix), as.data.frame(comissoes_matrix))
 df_legis_light$encerramento <- NULL
+df_legis_light$ano <- NULL
 
 # text_corpus.copy <- text_corpus
 # text_corpus <- tm_map(text_corpus, stemCompletion, dictionary=text_corpus.copy)
